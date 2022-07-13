@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     # Created Apps
     'house',
+    'dashboard',
 ]
 
 MIDDLEWARE = [
