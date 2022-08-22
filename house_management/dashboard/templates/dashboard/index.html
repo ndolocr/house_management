@@ -1,32 +1,171 @@
+{% extends 'dashboard/base.html'  %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>crn - House Mgnt</title>
+{% block content %}
 
-    <!-- Styling sheets -->
-    <link rel="stylesheet" type="text/css" href="{% static '/css/bootstrap.css' %}">
+<!-- <div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <div class="page-title-right">
+                <ol class="breadcrumb m-0">
+                    <li class="breadcrumb-item"><a href="#">Apps Board</a></li>
 
-</head>
-<body>
-    <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-12 col-sx-12">
-            <form method="POST" action="">
-                {% csrf_token %}
-                <div class="form-group">
-                    <input type="text" placeholder="email" name="email" id="email" class="form-control">
-                </div>
-                <div class="form-group">
-                    <input type="password" placeholder="password" name="password" id="password"class="form-control">
-                </div>
-                <div class="form-group">
-                    <input type="submit" name="submit" id="submit" value="submit">
-                </div>
-            </form>
+
+                    {% if perms.core.view_all_countries %}
+                    <li>
+                        <a href="#">Country Choice</a>
+                    </li>
+                    {%endif%}
+                    <li class="breadcrumb-item"><a href="#">Alerts</a></li>
+                    <li class="breadcrumb-item active"> Case detail</li>
+                </ol>
+            </div>
         </div>
     </div>
-</body>
-</html>
+</div> -->
+
+<div class="row">
+    <div class="col-xl-12 col-lg-12">
+        <!-- Begin Quick Stats -->
+        
+        <div class="row">
+            
+            <div class="col-lg-4">
+                <div class="card widget-flat">
+                    <div class="card-body">
+                        <div class="float-right">
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <h5 class="text-muted font-weight-normal mt-0" title="Number of Customers">Total Plots</h5>
+                        <h3 class="mt-3 mb-3">10</h3>
+                        <p class="mb-0 text-muted">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card widget-flat">
+                    <div class="card-body">
+                        <div class="float-right">
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <h5 class="text-muted font-weight-normal mt-0" title="Number of Customers">Total Houses</h5>
+                        <h3 class="mt-3 mb-3">10</h3>
+                        <p class="mb-0 text-muted">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card widget-flat">
+                    <div class="card-body">
+                        <div class="float-right">
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <h5 class="text-muted font-weight-normal mt-0" title="Number of Customers">Total Rooms</h5>
+                        <h3 class="mt-3 mb-3">10</h3>
+                        <p class="mb-0 text-muted">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <br />
+        <div class="row">
+            
+            <div class="col-lg-4">
+                <div class="card widget-flat">
+                    <div class="card-body">
+                        <div class="float-right">
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <h5 class="text-muted font-weight-normal mt-0" title="Number of Customers">Total Tenants</h5>
+                        <h3 class="mt-3 mb-3">10</h3>
+                        <p class="mb-0 text-muted">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card widget-flat">
+                    <div class="card-body">
+                        <div class="float-right">
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <h5 class="text-muted font-weight-normal mt-0" title="Number of Customers">Number of Tenants in arreas</h5>
+                        <h3 class="mt-3 mb-3">10</h3>
+                        <p class="mb-0 text-muted">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card widget-flat">
+                    <div class="card-body">
+                        <div class="float-right">
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <h5 class="text-muted font-weight-normal mt-0" title="Number of Customers">Total Amoount in arreas</h5>
+                        <h3 class="mt-3 mb-3">10</h3>
+                        <p class="mb-0 text-muted">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <!-- End  -->
+
+    </div>
+   
+    <div class="col-xl-12 col-lg-12"> 
+        <br/>
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-centered table-nowrap table-hover mb-0">
+                        <thead>
+                            <tr>
+                                <th colspan="7">View Tenant Information</th>
+                            </tr>
+                            <tr>
+                                <th>#</th>
+                                <th>Passport Pic</th>
+                                <th>Name</th>
+                                <th>Id Number</th>
+                                <th>Telephone No.</th>
+                                <th>Update Information</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            {% for tentant in tenants %}
+                            <tr>
+                                <td></td>
+                                <td> <img /> </td>
+                                <td> {{tenant.name}} </td>
+                                <td> {{tenant.id}} </td>
+                                <td> {{tenant.tel}} </td>
+                                <td> <a href="" class="btn btn-success"> Edit </a> </td>
+                            </tr>
+                            {% endfor %}
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

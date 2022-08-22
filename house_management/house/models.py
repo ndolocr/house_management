@@ -59,9 +59,9 @@ class Room(models.Model):
 
 class Tenant(models.Model):
     id_number = models.CharField( max_length = 255 )
+    gender = models.CharField( max_length = 255 )
     last_name = models.CharField( max_length = 255 )
     first_name = models.CharField( max_length = 255 )
-    room = models.ForeignKey( Room, on_delete=models.CASCADE )
     id_card_back_image = models.ImageField( upload_to='id_card' )
     id_card_front_image = models.ImageField( upload_to='id_card' )
     middle_name = models.CharField( max_length = 255, null = True )
