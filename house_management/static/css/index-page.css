@@ -1,0 +1,10 @@
+.content-page{
+    padding: 20px;
+    margin-top: 10px;
+    background: #FFFFFF;
+}
+
+.content-box{
+    border-radius: 5px;
+    border: solid 1px #EEEEEE;
+}
