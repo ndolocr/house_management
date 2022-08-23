@@ -13,10 +13,15 @@
 .grey-heading{
     height: 40px;
     color: #FFFFFF;
+    text-align: left;
+    padding-left: 10%;
+    font-weight: bold;
     background: #555555;
+    font-family: "Trirong", serif;
 }
 
 .grey-body{
     height: 120px;
+    padding-left: 10%;
     background: #999999;
 }
