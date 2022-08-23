@@ -1,0 +1,48 @@
+body {
+    padding: 10px;
+    background: #ECECEC;
+}
+
+.top-bar-menu{
+    padding: 5px;
+    background: #FFFFFF;
+}
+
+.branding{
+    font-size: 30px;
+    text-align: center;
+    /* font-family: "Trirong", serif; */
+    /* font-family: "Sofia", sans-serif; */
+    /* font-family: "Audiowide", sans-serif; */
+    font-family: 'Inspiration', cursive;
+}
+
+.menus{ font-family: "Sofia", sans-serif; font-family: "Audiowide", sans-serif;}
+.menus ul{
+    list-style: none;
+}
+
+.menus ul li{
+    float: left;
+    padding: 10px;
+    border-right: solid #CCCCCC 1px;
+}
+.menus ul li:hover{ text-decoration: underline; }
+
+.menus ul li.last{
+    border: none;
+}
+
+.user-info{
+    text-align: right;
+    padding-right: 20px;
+    font-family: "Sofia", sans-serif;
+}
+
+.user-avator{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #333333;
+    display: inline-block;
+}

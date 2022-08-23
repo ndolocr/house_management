@@ -6,102 +6,15 @@
         <meta charset="utf-8"> 
         <metaname="viewport" content="width=device-width, initial-scale=1, shrink-to- fit=no">
         <!-- Bootstrap CSS -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/ css/bootstrap.min.css"> -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
 
-    <title>Dashboard</title> </head>
-    <body data-layout="detached" class="loading">
-        
-        <div id="overlay">
-            <div id="overlay-text">
-                <div class="loader"></div>
-            </div>
-        </div>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong|Inspiration">
+        <title>Dashboard</title> 
+    </head>
 
-        {% url 'home' as home_url %}
-        {% url 'about' as about_url %}
-        <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
-            <a class="navbar-brand" href="#">House Mgnt</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"> 
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item {% if request.path == home_url %} active {% endif %}">  
-                        <a class="nav-link" href="#">Home</a> 
-                    </li> 
-                    <li class="nav-item {% if request.path == about_url %}active{% endif %}"> 
-                        <a class="nav-link" href="{#">About us</a> 
-                    </li>
-                </ul> 
-            </div>
-
-            <div class="dropdown float-right">
-                <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false" data-target="#dd">
-                    User Actions
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" id="dd">
-                    <p class="dropdown-item" data-dismiss="dropdown">  <i class="uil-map-marker"></i>  KENYA </p>
-                    <p class="dropdown-item" data-dismiss="dropdown" style="text-transform: uppercase;">  <i class="uil-traffic-barrier"></i>  ADMIN </p>
-                    <p class="dropdown-item" data-dismiss="dropdown" style="text-transform: lowercase;"> <i class="uil-user"></i>  crndolo@gmail.com </p>
-                    <hr>
-                    <a href="#" class="dropdown-item" data-dismiss="dropdown"> <i class="uil-lock-alt"></i>  Logout</a>
-                    
-                    <a href="#" class="dropdown-item">Kindly Sign In</a> 
-                </div>
-            </div>
-        </nav>
-        <div class="clearfix"></div>
-        <!-- BEGIN CONTAINER -->
-        <div class="container-fluid">
-            <div class="wrapper">
-                <!-- ========== Begin Left Sidebar Start ========== -->
-                <div class="row">
-                <div class="col-lg-2 col-md-2">
-                <div class="left-side-menu left-side-menu-detached "> 
-                    <!-- BEGIN SIDE MENU -->
-                    <ul class="metismenu side-nav">
-                        <li class="side-nav-title side-nav-item">Navigation</li>
-                        <li class="side-nav-item">
-                            <a href="javascript: void(0);" class="side-nav-link">
-                                <i class="uil-home-alt"></i>
-                                <span class="badge badge-info badge-pill float-right"></span>
-                                <span> Home </span>
-                            </a>
-                            <ul class="side-nav-second-level" aria-expanded="false">
-                                <li>
-                                    <a href="#">Apps Board</a>
-                                </li>                                
-                                <li>
-                                    <a href="#">Country Choice</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    
-                </div>
-                </div>
-                <div class="clearfix"></div>
-                <!-- ========== End Left Sidebar Start ========== -->
-                
-                
-
-                <!-- ========== Begin Page Content ========== -->
-                <div class="col-lg-10 col-md-10">
-                <div class="content-page">
-                    <div class="content">
-                        {% block content%} {% endblock%}
-                    </div>
-                </div>
-                </div>
-                </div>
-                <!-- ========== End Page Content ========== -->
-            </div>
-        </div>
-        <!-- END CONTAINER -->
-
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"> </script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"> </script>
+    <body>
+        {% block content %} {% endblock %}
     </body>
 </html>
