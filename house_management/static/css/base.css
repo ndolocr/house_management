@@ -1,8 +1,9 @@
 body {
     padding: 10px;
-    max-height: 100vh;
     background: #ECECEC;
 }
+
+.main-page{ max-height: 100vh; }
 
 .top-bar-menu{
     padding: 5px;
