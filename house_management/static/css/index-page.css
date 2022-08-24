@@ -10,18 +10,21 @@
     border: solid 1px #EEEEEE;
 }
 
-.grey-heading{
+.box-heading{
     height: 40px;
     color: #FFFFFF;
     text-align: left;
     padding-left: 10%;
     font-weight: bold;
-    background: #555555;
     font-family: "Trirong", serif;
 }
 
-.grey-body{
+.box-body{
     height: 120px;
     padding-left: 10%;
-    background: #999999;
 }
+
+.grey{ background: #999999; }
+.grey{ background: #555555; }
+.purple-light{ background:  #8e44ad ;}
+.purple-dark{ background:  #5b2c6f; }
